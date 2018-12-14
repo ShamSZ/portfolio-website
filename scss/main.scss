@@ -1,0 +1,34 @@
+body {
+  text-align: center;
+  background-color: #1b1a28;
+  color: #90b3d3;
+  font-family: helvetica;
+  height: 97vh;
+  width: 97vw;
+  border: solid #90b3d3 5px;
+  border-radius: 20px;
+  margin: 5px auto;
+}
+main{
+  overflow: auto;
+  height: 100%;
+}
+p {
+  font-size: 18px;
+}
+.avatar {
+  margin-top: 150px;
+  border-radius: 20px;
+  height: 150px;
+}
+
+
+
+.projects{
+  width: 100%;
+  height: 300px;
+}
+
+.project-box img{
+  max-width: 40%;
+}
