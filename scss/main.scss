@@ -9,26 +9,37 @@ body {
   border-radius: 20px;
   margin: 5px auto;
 }
-main{
+.header{
+  p {
+    font-size: 18px;
+  }
+  .avatar {
+    border-radius: 20px;
+    max-height: 20vh;
+  }
+}
+main {
   overflow: auto;
   height: 100%;
-}
-p {
-  font-size: 18px;
-}
-.avatar {
-  margin-top: 150px;
-  border-radius: 20px;
-  height: 150px;
 }
 
 
 
 .projects{
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   height: 300px;
-}
+  .project-box {
+    display: flex;
+  }
+  .image{
+    max-width: 40%;
+    img{
+      width: 100%;
+    }
+  }
+  .description{
+    max-width: 60%;
 
-.project-box img{
-  max-width: 40%;
+  }
 }
