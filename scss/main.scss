@@ -5,30 +5,28 @@ body {
   font-family: helvetica;
   height: 97vh;
   width: 97vw;
-  border: solid #90b3d3 5px;
-  border-radius: 20px;
   margin: 5px auto;
 }
-.header{
+
+section.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   p {
     font-size: 18px;
   }
   .avatar {
-    border-radius: 20px;
-    max-height: 20vh;
+    border-radius: 50%;
+    max-height: 200px;
   }
 }
-main {
-  overflow: auto;
-  height: 100%;
-}
+// each section will have a set height of 100vh
+// hover over image will will expand it with project name and dates on it
 
 
-
-.projects{
+section.projects{
   width: 90%;
   margin: 0 auto;
-  height: 300px;
   .project-box {
     display: flex;
   }
@@ -40,6 +38,5 @@ main {
   }
   .description{
     max-width: 60%;
-
   }
 }

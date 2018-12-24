@@ -5,39 +5,36 @@ body {
   font-family: helvetica;
   height: 97vh;
   width: 97vw;
-  border: solid #90b3d3 5px;
-  border-radius: 20px;
   margin: 5px auto;
 }
 
-.header p {
+section.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.header p {
   font-size: 18px;
 }
-.header .avatar {
-  border-radius: 20px;
-  max-height: 20vh;
+section.header .avatar {
+  border-radius: 50%;
+  max-height: 200px;
 }
 
-main {
-  overflow: auto;
-  height: 100%;
-}
-
-.projects {
+section.projects {
   width: 90%;
   margin: 0 auto;
-  height: 300px;
 }
-.projects .project-box {
+section.projects .project-box {
   display: flex;
 }
-.projects .image {
+section.projects .image {
   max-width: 40%;
 }
-.projects .image img {
+section.projects .image img {
   width: 100%;
 }
-.projects .description {
+section.projects .description {
   max-width: 60%;
 }
 
