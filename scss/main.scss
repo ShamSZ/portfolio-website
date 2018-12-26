@@ -6,67 +6,69 @@ body {
   height: 97vh;
   width: 97vw;
   margin: 5px auto;
-  hr{
+  hr {
     border-color: #90b3d3;
   }
-  a{
+  a {
     color: white;
     text-decoration: none;
   }
 }
 
-section.header{
+section.header {
   display: flex;
   justify-content: center;
   align-items: center;
-  p {
-    font-size: 18px;
-  }
-  .avatar {
-    border-radius: 50%;
-    max-height: 200px;
-  }
-}
-// each section will have a set height of 100vh
-// hover over image will will expand it with project name and dates on it
-
-
-section.projects{
-  width: 95%;
-  margin: 0 auto;
-  .project-box {
-    display: flex;
-    height: 350px;
-  }
-  .image{
-    transition: all 1s;
-    max-width: 50%;
-    img{
-      width: 100%;
+  height: 100vh;
+  .text {
+    p {
+      font-size: 18px;
     }
   }
-  .description{
+}
+
+section.projects {
+  width: 95%;
+  margin: 0 auto;
+
+  .project-box {
+    display: flex;
+    height: 50vh;
+  }
+
+  .image {
+    transition: all 1s;
     max-width: 50%;
-    height: 350px;
+    img {
+      max-width: 100%;
+      max-height: 50vh;
+    }
+  }
+
+  .description {
+    max-width: 50%;
+    height: 100%;
+
     div.title {
       position: relative;
       top: 20%;
       transition: all 2s;
     }
-    div.stack{
+    div.stack {
       position: relative;
       bottom: 30%;
       transition: all 2s;
     }
-    div.text{
+    div.text {
       transition: opacity 2s;
       opacity: 0;
       width: 95%;
       margin: 0 auto;
     }
   }
-  .project-box:hover{
-    div.text{
+
+  .project-box:hover {
+    div.text {
       opacity: 1;
     }
     div.title {
@@ -76,10 +78,18 @@ section.projects{
       bottom: 0;
     }
   }
-  .odd{
-    float: left;
-  }
-  .even{
-    float: right;
+}
+section.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  width: 95%;
+  margin: 0 auto;
+  .profile-pic {
+    img {
+      border-radius: 50%;
+      max-height: 200px;
+    }
   }
 }

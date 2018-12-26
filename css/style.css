@@ -19,13 +19,10 @@ section.header {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
-section.header p {
+section.header .text p {
   font-size: 18px;
-}
-section.header .avatar {
-  border-radius: 50%;
-  max-height: 200px;
 }
 
 section.projects {
@@ -34,18 +31,19 @@ section.projects {
 }
 section.projects .project-box {
   display: flex;
-  height: 350px;
+  height: 50vh;
 }
 section.projects .image {
   transition: all 1s;
   max-width: 50%;
 }
 section.projects .image img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 50vh;
 }
 section.projects .description {
   max-width: 50%;
-  height: 350px;
+  height: 100%;
 }
 section.projects .description div.title {
   position: relative;
@@ -72,11 +70,18 @@ section.projects .project-box:hover div.title {
 section.projects .project-box:hover div.stack {
   bottom: 0;
 }
-section.projects .odd {
-  float: left;
+
+section.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  width: 95%;
+  margin: 0 auto;
 }
-section.projects .even {
-  float: right;
+section.about .profile-pic img {
+  border-radius: 50%;
+  max-height: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */
