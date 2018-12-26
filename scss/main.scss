@@ -31,12 +31,37 @@ section.projects{
     display: flex;
   }
   .image{
-    max-width: 40%;
+    transition: all 1s;
+    max-width: 50%;
     img{
       width: 100%;
     }
   }
   .description{
-    max-width: 60%;
+    max-width: 50%;
+    div.title {
+      position: relative;
+      top: 25%;
+      transition: all 2s;
+    }
+    div.text{
+      transition: opacity 2s;
+      opacity: 0;
+    }
+  }
+  .project-box:hover{
+    div.text{
+      opacity: 1;
+    }
+    div.title {
+      position: relative;
+      top: 0;
+    }
+  }
+  .odd{
+    float: left;
+  }
+  .even{
+    float: right;
   }
 }

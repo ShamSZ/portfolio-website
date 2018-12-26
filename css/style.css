@@ -29,13 +29,36 @@ section.projects .project-box {
   display: flex;
 }
 section.projects .image {
-  max-width: 40%;
+  transition: all 1s;
+  max-width: 50%;
 }
 section.projects .image img {
   width: 100%;
 }
 section.projects .description {
-  max-width: 60%;
+  max-width: 50%;
+}
+section.projects .description div.title {
+  position: relative;
+  top: 25%;
+  transition: all 2s;
+}
+section.projects .description div.text {
+  transition: opacity 2s;
+  opacity: 0;
+}
+section.projects .project-box:hover div.text {
+  opacity: 1;
+}
+section.projects .project-box:hover div.title {
+  position: relative;
+  top: 0;
+}
+section.projects .odd {
+  float: left;
+}
+section.projects .even {
+  float: right;
 }
 
 /*# sourceMappingURL=style.css.map */
