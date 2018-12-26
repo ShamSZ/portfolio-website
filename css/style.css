@@ -22,11 +22,12 @@ section.header .avatar {
 }
 
 section.projects {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 section.projects .project-box {
   display: flex;
+  height: 350px;
 }
 section.projects .image {
   transition: all 1s;
@@ -37,22 +38,32 @@ section.projects .image img {
 }
 section.projects .description {
   max-width: 50%;
+  height: 350px;
 }
 section.projects .description div.title {
   position: relative;
-  top: 25%;
+  top: 20%;
+  transition: all 2s;
+}
+section.projects .description div.stack {
+  position: relative;
+  bottom: 30%;
   transition: all 2s;
 }
 section.projects .description div.text {
   transition: opacity 2s;
   opacity: 0;
+  width: 95%;
+  margin: 0 auto;
 }
 section.projects .project-box:hover div.text {
   opacity: 1;
 }
 section.projects .project-box:hover div.title {
-  position: relative;
   top: 0;
+}
+section.projects .project-box:hover div.stack {
+  bottom: 0;
 }
 section.projects .odd {
   float: left;
