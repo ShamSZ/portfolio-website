@@ -20,6 +20,7 @@ nav {
   top: 50px;
   left: 25px;
   width: 200px;
+  opacity: 0.5;
 }
 nav .active {
   padding: 5px;
@@ -47,6 +48,8 @@ section.projects .project-box {
 section.projects .image {
   transition: all 1s;
   max-width: 50%;
+  display: flex;
+  align-items: center;
 }
 section.projects .image img {
   max-width: 100%;
@@ -58,19 +61,26 @@ section.projects .description {
 }
 section.projects .description div.title {
   position: relative;
-  top: 20%;
+  top: 30%;
   transition: all 2s;
+  height: 15%;
 }
 section.projects .description div.stack {
   position: relative;
-  bottom: 30%;
+  bottom: 35%;
   transition: all 2s;
+  height: 15%;
 }
 section.projects .description div.text {
   transition: opacity 2s;
   opacity: 0;
   width: 95%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60%;
+  overflow: scroll;
 }
 section.projects .project-box:hover div.text {
   opacity: 1;
