@@ -1,30 +1,40 @@
 body {
   text-align: center;
-  background-color: #1b1a28;
-  color: #90b3d3;
+  background-color: #112F41;
+  color: #068587;
   font-family: helvetica;
   height: 97vh;
   width: 97vw;
   margin: 5px auto;
 }
 body hr {
-  border-color: #90b3d3;
+  border-color: #ED553B;
 }
 body a {
-  color: white;
+  color: #F2B134;
   text-decoration: none;
+}
+body h2 {
+  color: #4FB99F;
+}
+body .about-header h2, body .projects h2 {
+  margin-bottom: 0;
 }
 
 nav {
-  position: fixed;
-  top: 50px;
-  left: 25px;
   width: 200px;
-  opacity: 0.5;
+  height: 30px;
+  position: fixed;
+  top: 50vh;
+  left: -85px;
+  transform: rotate(90deg);
 }
-nav .active {
+nav span.active {
   padding: 5px;
-  background-color: #90b3d3;
+  background-color: #ED553B;
+}
+nav span.active a {
+  color: #F2B134;
 }
 
 section.header {
@@ -43,7 +53,7 @@ section.projects {
 }
 section.projects .project-box {
   display: flex;
-  height: 50vh;
+  height: 46vh;
 }
 section.projects .image {
   transition: all 1s;
@@ -53,7 +63,7 @@ section.projects .image {
 }
 section.projects .image img {
   max-width: 100%;
-  max-height: 50vh;
+  max-height: 100%;
 }
 section.projects .description {
   max-width: 50%;
@@ -64,12 +74,14 @@ section.projects .description div.title {
   top: 30%;
   transition: all 2s;
   height: 15%;
+  color: #4FB99F;
 }
 section.projects .description div.stack {
   position: relative;
   bottom: 35%;
   transition: all 2s;
   height: 15%;
+  color: #4FB99F;
 }
 section.projects .description div.text {
   transition: opacity 2s;
@@ -103,6 +115,9 @@ section.about {
 section.about .profile-pic img {
   border-radius: 50%;
   max-height: 200px;
+}
+section.about .icon-links {
+  font-size: 26px;
 }
 
 /*# sourceMappingURL=style.css.map */
