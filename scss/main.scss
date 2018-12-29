@@ -15,6 +15,7 @@ body {
   }
   h2 {
     color: #4FB99F;
+    text-transform: uppercase;
   }
   .about-header, .projects{
     h2 {
@@ -46,8 +47,15 @@ section.header {
   align-items: center;
   height: 100vh;
   .text {
-    p {
-      font-size: 18px;
+    text-transform: uppercase;
+    h2 {
+      font-size: 40px;
+    }
+    h3 {
+      font-size: 30px;
+    }
+    span {
+      font-size: 20px;
     }
   }
 }
@@ -129,7 +137,10 @@ section.about {
       max-height: 200px;
     }
   }
-  .icon-links{
+  .icon-links {
     font-size: 26px;
+  }
+  .skills {
+    color: #ED553B;
   }
 }

@@ -16,6 +16,7 @@ body a {
 }
 body h2 {
   color: #4FB99F;
+  text-transform: uppercase;
 }
 body .about-header h2, body .projects h2 {
   margin-bottom: 0;
@@ -43,8 +44,17 @@ section.header {
   align-items: center;
   height: 100vh;
 }
-section.header .text p {
-  font-size: 18px;
+section.header .text {
+  text-transform: uppercase;
+}
+section.header .text h2 {
+  font-size: 40px;
+}
+section.header .text h3 {
+  font-size: 30px;
+}
+section.header .text span {
+  font-size: 20px;
 }
 
 section.projects {
@@ -118,6 +128,9 @@ section.about .profile-pic img {
 }
 section.about .icon-links {
   font-size: 26px;
+}
+section.about .skills {
+  color: #ED553B;
 }
 
 /*# sourceMappingURL=style.css.map */
