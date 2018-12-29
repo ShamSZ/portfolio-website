@@ -21,6 +21,9 @@ body a {
   color: #F2B134;
   text-decoration: none;
 }
+body a:hover {
+  text-decoration: underline;
+}
 body h2 {
   color: #4FB99F;
   text-transform: uppercase;
@@ -38,12 +41,12 @@ nav {
   left: -85px;
   transform: rotate(90deg);
 }
-nav span.active {
+nav span {
+  transition: all 1s;
   padding: 5px;
-  background-color: #ED553B;
 }
-nav span.active a {
-  color: #F2B134;
+nav span.active {
+  background-color: #ED553B;
 }
 
 section.header {
@@ -137,6 +140,12 @@ section.about .icon-links {
 }
 section.about .skills {
   color: #ED553B;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+section.about .skills span {
+  width: 25%;
 }
 
 /*# sourceMappingURL=style.css.map */

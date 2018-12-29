@@ -20,6 +20,9 @@ body {
     color: #F2B134;
     text-decoration: none;
   }
+  a:hover {
+    text-decoration: underline;
+  }
   h2 {
     color: #4FB99F;
     text-transform: uppercase;
@@ -32,9 +35,7 @@ body {
   }
 
 }
-// nav, main, .projects, img {
-//   z-index: 100;
-// }
+
 nav {
   width: 200px;
   height: 30px;
@@ -42,12 +43,12 @@ nav {
   top: 50vh;
   left: -85px;
   transform: rotate(90deg);
-  span.active {
+  span {
+    transition: all 1s;
     padding: 5px;
+  }
+  span.active {
     background-color: #ED553B;
-    a {
-      color: #F2B134;
-    }
   }
 }
 
@@ -150,5 +151,11 @@ section.about {
   }
   .skills {
     color: #ED553B;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    span {
+      width: 25%;
+    }
   }
 }
