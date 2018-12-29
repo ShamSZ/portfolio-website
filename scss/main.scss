@@ -1,3 +1,9 @@
+canvas {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
 body {
   text-align: center;
   background-color: #112F41;
@@ -6,8 +12,9 @@ body {
   height: 97vh;
   width: 97vw;
   margin: 5px auto;
+
   hr {
-    border-color: #ED553B;
+    border-color: #F2B134;
   }
   a {
     color: #F2B134;
@@ -16,6 +23,7 @@ body {
   h2 {
     color: #4FB99F;
     text-transform: uppercase;
+    font-size: 30px;
   }
   .about-header, .projects{
     h2 {
@@ -24,7 +32,9 @@ body {
   }
 
 }
-
+// nav, main, .projects, img {
+//   z-index: 100;
+// }
 nav {
   width: 200px;
   height: 30px;
@@ -48,11 +58,9 @@ section.header {
   height: 100vh;
   .text {
     text-transform: uppercase;
-    h2 {
+    h1 {
       font-size: 40px;
-    }
-    h3 {
-      font-size: 30px;
+      color: #4FB99F;
     }
     span {
       font-size: 20px;

@@ -1,3 +1,10 @@
+canvas {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
 body {
   text-align: center;
   background-color: #112F41;
@@ -8,7 +15,7 @@ body {
   margin: 5px auto;
 }
 body hr {
-  border-color: #ED553B;
+  border-color: #F2B134;
 }
 body a {
   color: #F2B134;
@@ -17,6 +24,7 @@ body a {
 body h2 {
   color: #4FB99F;
   text-transform: uppercase;
+  font-size: 30px;
 }
 body .about-header h2, body .projects h2 {
   margin-bottom: 0;
@@ -47,11 +55,9 @@ section.header {
 section.header .text {
   text-transform: uppercase;
 }
-section.header .text h2 {
+section.header .text h1 {
   font-size: 40px;
-}
-section.header .text h3 {
-  font-size: 30px;
+  color: #4FB99F;
 }
 section.header .text span {
   font-size: 20px;
