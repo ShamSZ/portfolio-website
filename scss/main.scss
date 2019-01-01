@@ -47,7 +47,7 @@ nav {
   position: fixed;
   transform: rotate(90deg);
   left: -110px;
-  margin-left: 10px;
+  margin-left: 15px;
   top: 50vh;
   text-transform: uppercase;
   span {
@@ -75,7 +75,7 @@ div.contact {
   align-items: center;
   position: fixed;
   top: 40vh;
-  right: 10px;
+  right: 15px;
   height: 25%;
   width: 30px;
   flex-wrap: wrap;
@@ -195,7 +195,9 @@ section.about {
   .skills {
     color: #ED553B;
     display: flex;
+    height: 25%;
     justify-content: space-around;
+    align-items: space-around;
     flex-wrap: wrap;
     span {
       width: 25%;
