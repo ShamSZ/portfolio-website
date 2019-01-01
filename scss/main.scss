@@ -70,22 +70,25 @@ nav {
 div.contact {
   display: flex;
   justify-content: center;
+  align-items: center;
   position: fixed;
   top: 41vh;
   right: 0px;
   height: 20vh;
   width: 30px;
   flex-wrap: wrap;
-  span {
+  p {
     box-sizing: border-box;
     margin: 2px 0;
     background-color: #ED553B;
-    // padding: 5px;
     width: 30px;
     height: 30px;
     font-size: 21px;
-   i {
-     vertical-align: middle;
+    a {
+      vertical-align: middle;
+      i {
+        vertical-align: middle;
+      }
     }
   }
 }
@@ -113,6 +116,7 @@ section.projects {
   .project-box {
     display: flex;
     height: 46vh;
+    justify-content: center;
   }
 
   .image {

@@ -68,6 +68,7 @@ nav span.active a, nav span:hover a {
 div.contact {
   display: flex;
   justify-content: center;
+  align-items: center;
   position: fixed;
   top: 41vh;
   right: 0px;
@@ -75,7 +76,7 @@ div.contact {
   width: 30px;
   flex-wrap: wrap;
 }
-div.contact span {
+div.contact p {
   box-sizing: border-box;
   margin: 2px 0;
   background-color: #ED553B;
@@ -83,7 +84,10 @@ div.contact span {
   height: 30px;
   font-size: 21px;
 }
-div.contact span i {
+div.contact p a {
+  vertical-align: middle;
+}
+div.contact p a i {
   vertical-align: middle;
 }
 
@@ -111,6 +115,7 @@ section.projects {
 section.projects .project-box {
   display: flex;
   height: 46vh;
+  justify-content: center;
 }
 section.projects .image {
   transition: all 1s;
