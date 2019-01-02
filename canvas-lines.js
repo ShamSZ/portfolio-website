@@ -6,7 +6,8 @@ canvas.height = window.innerHeight;
 const c = canvas.getContext('2d');
 const colours = ['rgba(252, 60, 60, 1)'];
 const lineColours = ['rgba(0, 173, 181, 0.1)'];
-const highLightColour = '#FFF4E0';
+// const highLightColour = 'rgba(255, 244, 224, 1)';
+const highLightColour = 'rgba(0, 173, 181, 1)';
 let circles = [];
 
 const mouse = {
