@@ -1,8 +1,9 @@
 canvas {
-  position: fixed;
+  position: absolute;
   z-index: -1;
   left: 0;
   top: 0;
+  opacity: 1;
 }
 
 body {
