@@ -4,9 +4,9 @@ canvas.height = window.innerHeight;
 
 
 const c = canvas.getContext('2d');
-const colours = ['#068587', '#4FB99F'];
-const lineColour = 'rgba(0,0,0, 0)';
-const highLightColour = '#F2B134';
+const colours = ['rgba(252, 60, 60, 1)'];
+const lineColours = ['rgba(0, 173, 181, 0.1)'];
+const highLightColour = '#FFF4E0';
 let circles = [];
 
 const mouse = {
@@ -30,26 +30,27 @@ function handleMouseMove(event){
 
 function init(){
   circles = [];
-  for(let i = 0; i < 500; i++){
+  for(let i = 0; i < 50; i++){
     const radius = 1;
     const x = Math.random() * (canvas.width - radius * 2) + radius;
     const y = Math.random() * (canvas.height - radius * 2) + radius;
     const dx = (Math.random() - 0.5) * 0.5;
     const dy = (Math.random() - 0.5) * 0.5;
     const colour = colours[Math.floor(Math.random() * colours.length)];
-    circles.push(new Circle(x, y, dx, dy, radius, colour));
+    const lineColour = lineColours[Math.floor(Math.random() * lineColours.length)];
+    circles.push(new Circle(x, y, dx, dy, radius, colour, lineColour));
   }
 }
 
-function Circle(x, y, dx, dy, radius, colour){
+function Circle(x, y, dx, dy, radius, colour, lineColour){
   this.x = x;
   this.y = y;
   this.dx = dx;
   this.dy = dy;
   this.radius = radius;
-  this.lineColour = lineColour;
 
   this.colour = colour;
+  this.lineColour = lineColour;
   this.draw = function(){
     c.beginPath();
     c.moveTo(this.x, this.y);
@@ -77,7 +78,7 @@ function Circle(x, y, dx, dy, radius, colour){
 
     //adding interactivity with mouse:
 
-    if(mouse.x - this.x < 50 && mouse.x - this.x > -50){
+    if(mouse.x - this.x < 25 && mouse.x - this.x > -25){
       this.lineColour = highLightColour;
 
     } else {

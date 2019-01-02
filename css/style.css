@@ -3,13 +3,13 @@ canvas {
   z-index: -1;
   left: 0;
   top: 0;
-  opacity: 1;
+  opacity: 0.8;
 }
 
 body {
   text-align: center;
-  background-color: #112F41;
-  color: #068587;
+  background-color: #393E46;
+  color: #FFF4E0;
   font-family: Helvetica;
   height: 100vh;
   width: 100vw;
@@ -23,16 +23,16 @@ body main a:hover {
   text-decoration: underline;
 }
 body hr {
-  border-color: #F2B134;
+  border-color: #00ADB5;
 }
 body a {
-  color: #F2B134;
+  color: #FC3C3C;
   text-decoration: none;
 }
 body h2 {
-  color: #4FB99F;
-  text-transform: uppercase;
+  color: #FFF4E0;
   font-size: 30px;
+  text-transform: uppercase;
 }
 body .about-header h2, body .projects h2 {
   margin-bottom: 0;
@@ -53,20 +53,21 @@ nav {
 nav span {
   transition: all 1s;
   margin: 0 2px;
-  background-color: #ED553B;
+  background-color: #F8B500;
   padding: 5px;
   width: 10px;
   overflow: hidden;
 }
 nav span a {
   vertical-align: middle;
-  color: #ED553B;
+  color: #F8B500;
 }
 nav span.active, nav span:hover {
   width: 90px;
 }
 nav span.active a, nav span:hover a {
-  color: #F2B134;
+  color: #393E46;
+  font-weight: 700;
 }
 
 div.contact {
@@ -83,12 +84,13 @@ div.contact {
 div.contact p {
   box-sizing: border-box;
   margin: 2px 0;
-  background-color: #ED553B;
+  background-color: #F8B500;
   width: 30px;
   height: 30px;
   font-size: 21px;
 }
 div.contact p a {
+  color: #393E46;
   vertical-align: middle;
 }
 div.contact p a i {
@@ -106,10 +108,10 @@ section.header .text {
 }
 section.header .text h1 {
   font-size: 45px;
-  color: #4FB99F;
+  color: #FFF4E0;
 }
 section.header .text h2 {
-  color: #068587;
+  color: #00ADB5;
 }
 
 section.projects {
@@ -140,14 +142,14 @@ section.projects .description div.title {
   top: 30%;
   transition: all 2s;
   height: 15%;
-  color: #4FB99F;
+  color: #00ADB5;
 }
 section.projects .description div.stack {
   position: relative;
   bottom: 35%;
   transition: all 2s;
   height: 15%;
-  color: #4FB99F;
+  color: #00ADB5;
 }
 section.projects .description div.text {
   transition: opacity 2s;
@@ -192,17 +194,26 @@ section.about div.text {
   max-width: 60%;
 }
 section.about div.icon-links {
-  font-size: 26px;
+  color: #00ADB5;
+  font-size: 22px;
   margin-bottom: 24px;
 }
+section.about div.icon-links h4 {
+  text-transform: uppercase;
+}
+section.about div.icon-links a {
+  color: #FFF4E0;
+}
 section.about div.tech-box p {
-  color: #4FB99F;
+  color: #00ADB5;
 }
 section.about div.tech, section.about div.skills {
-  color: #F2B134;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+section.about div.tech i, section.about div.tech b, section.about div.skills i, section.about div.skills b {
+  color: #00ADB5;
 }
 section.about div.tech span, section.about div.skills span {
   padding: 10px 0;
@@ -210,7 +221,7 @@ section.about div.tech span, section.about div.skills span {
 }
 section.about div.tech img, section.about div.skills img {
   height: 16px;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 /*# sourceMappingURL=style.css.map */

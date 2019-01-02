@@ -3,12 +3,23 @@ canvas {
   z-index: -1;
   left: 0;
   top: 0;
-  opacity: 1;
+  opacity: 0.8;
 }
+
+// #112F41, #068587, #4FB99F, #F2B134, #ED553B
+
+// #393E46, #00ADB5, #FFF4E0, #F8B500, #FC3C3C
+
+$bg-color: #393E46;
+$detail-color: #00ADB5;
+$thumb-color: #F8B500;
+$text-color: #FFF4E0;
+$emphasis-color: #FC3C3C;
+
 body {
   text-align: center;
-  background-color: #112F41;
-  color: #068587;
+  background-color: $bg-color;
+  color: $text-color;
   font-family: Helvetica;
   height: 100vh;
   width: 100vw;
@@ -23,19 +34,20 @@ body {
   }
 
   hr {
-    border-color: #F2B134;
+    border-color: $detail-color;
   }
 
   a {
-    color: #F2B134;
+    color: $emphasis-color;
     text-decoration: none;
   }
 
   h2 {
-    color: #4FB99F;
-    text-transform: uppercase;
+    color: $text-color;
     font-size: 30px;
+    text-transform: uppercase;
   }
+
   .about-header, .projects{
     h2 {
       margin-bottom: 0;
@@ -60,16 +72,17 @@ nav {
     margin: 0 2px;
     a {
       vertical-align: middle;
-      color: #ED553B;
+      color: $thumb-color;
     }
-    background-color: #ED553B;
+    background-color: $thumb-color;
     padding: 5px;
     width: 10px;
     overflow: hidden;
   }
   span.active, span:hover {
     a {
-      color: #F2B134;
+      color: $bg-color;
+      font-weight: 700;
     }
     width: 90px;
   }
@@ -88,11 +101,12 @@ div.contact {
   p {
     box-sizing: border-box;
     margin: 2px 0;
-    background-color: #ED553B;
+    background-color: $thumb-color;
     width: 30px;
     height: 30px;
     font-size: 21px;
     a {
+      color: $bg-color;
       vertical-align: middle;
       i {
         vertical-align: middle;
@@ -109,10 +123,10 @@ section.header {
     text-transform: uppercase;
     h1 {
       font-size: 45px;
-      color: #4FB99F;
+      color: $text-color;
     }
     h2 {
-      color: #068587;
+      color: $detail-color;
     }
   }
 }
@@ -147,14 +161,14 @@ section.projects {
       top: 30%;
       transition: all 2s;
       height: 15%;
-      color: #4FB99F;
+      color: $detail-color;
     }
     div.stack {
       position: relative;
       bottom: 35%;
       transition: all 2s;
       height: 15%;
-      color: #4FB99F;
+      color: $detail-color;
     }
     div.text {
       transition: opacity 2s;
@@ -205,26 +219,35 @@ section.about {
     max-width: 60%;
   }
   div.icon-links {
-    font-size: 26px;
+    color: $detail-color;
+    font-size: 22px;
     margin-bottom: 24px;
+    h4 {
+      text-transform: uppercase;
+    }
+    a {
+      color: $text-color;
+    }
   }
   div.tech-box {
     p {
-      color: #4FB99F;
+      color: $detail-color;
     }
   }
   div.tech, div.skills {
-    color: #F2B134;
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
+    i, b {
+      color: $detail-color;
+    }
     span {
       padding: 10px 0;
       width: 25%;
     }
     img {
       height: 16px;
-      vertical-align: top;
+      vertical-align: middle;
     }
   }
 }
