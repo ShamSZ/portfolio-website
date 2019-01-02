@@ -142,14 +142,14 @@ section.projects .description div.title {
   top: 30%;
   transition: all 2s;
   height: 15%;
-  color: #00ADB5;
+  color: #FFF4E0;
 }
 section.projects .description div.stack {
   position: relative;
   bottom: 35%;
   transition: all 2s;
   height: 15%;
-  color: #00ADB5;
+  color: #FFF4E0;
 }
 section.projects .description div.text {
   transition: opacity 2s;
@@ -167,9 +167,11 @@ section.projects .project-box:hover div.text {
 }
 section.projects .project-box:hover div.title {
   top: 0;
+  color: #00ADB5;
 }
 section.projects .project-box:hover div.stack {
   bottom: 0;
+  color: #00ADB5;
 }
 
 section.about {

@@ -161,14 +161,14 @@ section.projects {
       top: 30%;
       transition: all 2s;
       height: 15%;
-      color: $detail-color;
+      color: $text-color;
     }
     div.stack {
       position: relative;
       bottom: 35%;
       transition: all 2s;
       height: 15%;
-      color: $detail-color;
+      color: $text-color;
     }
     div.text {
       transition: opacity 2s;
@@ -189,9 +189,11 @@ section.projects {
     }
     div.title {
       top: 0;
+      color: $detail-color;
     }
     div.stack {
       bottom: 0;
+      color: $detail-color;
     }
   }
 }
