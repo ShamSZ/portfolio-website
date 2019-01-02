@@ -1,5 +1,21 @@
-console.log('Psst... Hey!');
-console.log('Thanks for checking my website out. If you want to get in touch, go to the about section');
+const style1 =
+    'color: #4FB99F;' +
+    'font-family: Helvetica;' +
+    'font-size: 14px;';
+const style2 =
+    'color: #068587;' +
+    'font-size: 16px;' +
+    'font-weight: bold;';
+
+console.log('%cHello there! 👋', style1);
+console.log('%cThanks for checking out my website.', style1);
+console.log('%cIf you want to get in touch, contact me on the below:', style1);
+console.log('%csham.szoda@gmail.com', style2);
+console.log('%cor', style1);
+console.log('%clinkedin.com/in/ShamSZ', style2);
+
+// console.log('Psst... you there!');
+// console.log('Thanks for checking my website out. If you want to get in touch, go to the about section');
 const sections = [ '#home', '#projects', '#about'];
 let currentSection = 0;
 let fromTop = 0;

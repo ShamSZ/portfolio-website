@@ -8,24 +8,28 @@ body {
   text-align: center;
   background-color: #112F41;
   color: #068587;
-  font-family: helvetica;
-  height: 97vh;
+  font-family: Helvetica;
+  height: 100vh;
   width: 100vw;
   margin: 5px auto;
   main {
     width: 90%;
     margin: 0 auto;
+
+    a:hover {
+      text-decoration: underline;
+    }
   }
+
   hr {
     border-color: #F2B134;
   }
+
   a {
     color: #F2B134;
     text-decoration: none;
   }
-  a:hover {
-    text-decoration: underline;
-  }
+
   h2 {
     color: #4FB99F;
     text-transform: uppercase;
@@ -192,14 +196,13 @@ section.about {
   .icon-links {
     font-size: 26px;
   }
-  .skills {
-    color: #ED553B;
+  .tech, .skills {
+    color: #F2B134;
     display: flex;
-    height: 25%;
-    justify-content: space-around;
-    align-items: space-around;
+    justify-content:center;
     flex-wrap: wrap;
     span {
+      padding: 10px 0;
       width: 25%;
     }
   }
