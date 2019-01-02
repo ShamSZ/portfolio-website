@@ -58,6 +58,7 @@ nav span {
   overflow: hidden;
 }
 nav span a {
+  vertical-align: middle;
   color: #ED553B;
 }
 nav span.active, nav span:hover {
@@ -205,6 +206,10 @@ section.about div.tech, section.about div.skills {
 section.about div.tech span, section.about div.skills span {
   padding: 10px 0;
   width: 25%;
+}
+section.about div.tech img, section.about div.skills img {
+  height: 16px;
+  vertical-align: top;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -58,6 +58,7 @@ nav {
     transition: all 1s;
     margin: 0 2px;
     a {
+      vertical-align: middle;
       color: #ED553B;
     }
     background-color: #ED553B;
@@ -219,6 +220,10 @@ section.about {
     span {
       padding: 10px 0;
       width: 25%;
+    }
+    img {
+      height: 16px;
+      vertical-align: top;
     }
   }
 }
