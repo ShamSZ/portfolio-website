@@ -183,20 +183,35 @@ section.projects {
 section.about {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100vh;
   width: 100%;
   margin: 0 auto;
-  .profile-pic {
+  div.profile-pic {
     img {
       border-radius: 50%;
       max-height: 200px;
     }
   }
-  .icon-links {
-    font-size: 26px;
+  div.bio {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
   }
-  .tech, .skills {
+  div.text {
+    max-width: 60%;
+  }
+  div.icon-links {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+  div.tech-box {
+    p {
+      color: #4FB99F;
+    }
+  }
+  div.tech, div.skills {
     color: #F2B134;
     display: flex;
     justify-content:center;
