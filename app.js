@@ -1,9 +1,9 @@
 const style1 =
-    'color: #4FB99F;' +
+    'color: #FC3C3C;' +
     'font-family: Helvetica;' +
     'font-size: 14px;';
 const style2 =
-    'color: #068587;' +
+    'color: #393E46;' +
     'font-size: 16px;' +
     'font-weight: bold;';
 
