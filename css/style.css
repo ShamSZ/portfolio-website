@@ -20,14 +20,14 @@ body main {
   margin: 0 auto;
 }
 body main a:hover {
-  text-decoration: underline;
+  color: #FC3C3C;
+}
+body a {
+  text-decoration: none;
+  color: #FFF4E0;
 }
 body hr {
   border-color: #00ADB5;
-}
-body a {
-  color: #FC3C3C;
-  text-decoration: none;
 }
 body h2 {
   color: #FFF4E0;
@@ -162,6 +162,16 @@ section.projects .description div.text {
   height: 60%;
   overflow: scroll;
 }
+section.projects .description div.text div.links {
+  display: flex;
+  justify-content: space-around;
+}
+section.projects .description div.text div.links i {
+  color: #FC3C3C;
+}
+section.projects .description div.text div.links a:hover i {
+  color: #FFF4E0;
+}
 section.projects .project-box:hover div.text {
   opacity: 1;
 }
@@ -205,6 +215,9 @@ section.about div.icon-links h4 {
 }
 section.about div.icon-links a {
   color: #FFF4E0;
+}
+section.about div.icon-links a:hover {
+  color: #FC3C3C;
 }
 section.about div.tech-box p {
   color: #00ADB5;
