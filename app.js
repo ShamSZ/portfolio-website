@@ -40,3 +40,7 @@ $(window).on('scroll', () => {
     $navLink.eq(currentSection).addClass('active');
   }
 });
+
+const $head = $('head');
+console.log($head);
+$head.append('<link rel="shortcut icon" type="image/png" href="favicon.png"/>');
