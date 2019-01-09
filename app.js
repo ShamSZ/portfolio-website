@@ -42,7 +42,9 @@ $(window).on('scroll', () => {
 });
 
 const $head = $('head');
+const $favicon = $('#faviconId');
+console.log($favicon);
 $(document).ready(function() {
   console.log($head);
-  $head.append('<link rel="shortcut icon" type="image/png" href="favicon.png"/>');
+  $head.append($favicon);
 });
