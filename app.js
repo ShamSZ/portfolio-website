@@ -41,10 +41,9 @@ $(window).on('scroll', () => {
   }
 });
 
-const $head = $('head');
-const $favicon = $('#faviconId');
-console.log($favicon);
-$(document).ready(function() {
-  console.log($head);
-  $head.append($favicon);
-});
+// const $favicon = $('#faviconId');
+// console.log($favicon);
+// $(document).ready(function() {
+//   $('head').append($favicon);
+//   console.log($('head'));
+// });
