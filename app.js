@@ -39,9 +39,4 @@ $(window).on('scroll', () => {
     $navLink.removeClass('active');
     $navLink.eq(currentSection).addClass('active');
   }
-  const $favicon = $('#faviconId');
-  $(document).ready(function() {
-    $('head').append($favicon);
-    console.log($('head'));
-  });
 });
