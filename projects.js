@@ -37,7 +37,7 @@ const projectsData = [
     repoLink: 'https://github.com/ShamSZ/wdi-project-four',
     stack: 'HTML5, MongoDB, Express.js, React.js, Node.js, Mocha & Chai',
     mainImage: 'images/play-and-watch.png',
-    images: ['images/play-and-watch.png', 'images/play-and-watch.png']
+    images: ['images/play-and-watch.png', 'images/project4.gif']
   }
 ];
 
@@ -47,10 +47,10 @@ const projectsData = [
 function createProjectBox(project, i){
   //images
   function getThumbs(){
-    const imageTags = project.images.map((image, i) => `<img src="${image}" alt="${project.name} image${i + 1}">`);
+    const imageTags = project.images.map((image, i) => `<img class="thumb" src="${image}" alt="${project.name} image${i + 1}">`);
     return imageTags.join(',').replace(',', ' ');
   }
-  const mainImage = `<img src="${project.mainImage}" class="project-${i}-img" alt="${project.name} image">`;
+  const mainImage = `<div style="background-image: url(${project.mainImage})" class="mainImage"></div>`;
   const imageThumbs = `<article class="image-thumbs">${getThumbs()}</article>`;
   const imageBox = `<div class="image">   ${mainImage + imageThumbs} </div>`;
 
@@ -85,5 +85,10 @@ projectsData.forEach((project, i) => {
   createProjectBox(project, i+1);
 });
 
-const $displayImage = $('.image');
-console.log($displayImage);
+
+$('.thumb').on('click', handleClick);
+
+function handleClick(event){
+  const mainImage = event.target.parentElement.parentElement.children[0];
+  mainImage.setAttribute('style', `background-image: url(${event.target.src})`);
+}

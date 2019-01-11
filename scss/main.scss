@@ -145,14 +145,18 @@ section.projects {
   }
 
   .image {
-    transition: all 1s;
-    max-width: 70%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    img {
-      max-width: 100%;
-      max-height: 80%;
+    .mainImage {
+      transition: all 1s;
+      width: 100%;
+      // width: 100%;
+      min-height: 80%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: inline-block;
     }
     article.image-thumbs {
       height: 20%;
