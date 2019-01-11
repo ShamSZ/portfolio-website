@@ -6,8 +6,7 @@ const projectsData = [
     launchLink: 'https://shamsz.github.io/wdi-project-one/',
     repoLink: 'https://github.com/ShamSZ/wdi-project-one',
     stack: 'HTML5, CSS3, JavaScript',
-    mainImage: 'images/warp-factor2.png',
-    images: ['images/warp-factor2.png', 'images/warp-factor.png']
+    images: ['images/project1/warp-factor.png', 'images/project1/home.png', 'images/project1/gamemode.png', 'images/project1/shipselect.png', 'images/project1/briefing.png', 'images/project1/warp-factor-demo.gif', 'images/project1/pausemenu.png', 'images/project1/score.png']
   },
   {
     name: 'Rating Ninja',
@@ -47,10 +46,11 @@ const projectsData = [
 function createProjectBox(project){
   //images
   function getThumbs(){
-    const imageTags = project.images.map((image, i) => `<img class="thumb" src="${image}" alt="${project.name} image${i + 1}">`);
-    return imageTags.join(',').replace(',', ' ');
+    let imageTags = project.images.map((image, i) => `<img class="thumb" src="${image}" alt="${project.name} image${i + 1}">`);
+    imageTags = imageTags.join('');
+    return imageTags;
   }
-  const mainImage = `<div style="background-image: url(${project.mainImage})" class="mainImage"></div>`;
+  const mainImage = `<div style="background-image: url(${project.images[0]})" class="mainImage"></div>`;
   const imageThumbs = `<article class="image-thumbs">${getThumbs()}</article>`;
   const imageBox = `<div class="image">   ${mainImage + imageThumbs} </div>`;
 

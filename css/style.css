@@ -145,10 +145,10 @@ section.projects .image article.image-thumbs {
   width: 100%;
   overflow: auto;
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 section.projects .image article.image-thumbs img.thumb {
+  margin-right: 10px;
   max-height: 100%;
   width: 200px;
 }
