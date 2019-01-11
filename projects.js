@@ -41,10 +41,10 @@ const projectsData = [
   }
 ];
 
-// need to loop through projectsData and for each of the projects
+// Need to loop through projectsData and for each of the projects
 // create DOM elements
 
-function createProjectBox(project, i){
+function createProjectBox(project){
   //images
   function getThumbs(){
     const imageTags = project.images.map((image, i) => `<img class="thumb" src="${image}" alt="${project.name} image${i + 1}">`);
@@ -77,17 +77,17 @@ function createProjectBox(project, i){
   const descriptionBox = `<div class="description">${title + textBox + stack}</div>`;
 
   //adding it all to the projects section:
-  $('#projects').append(`<div class="project-box"> ${imageBox + descriptionBox}  </div>`);
+  $('#projects').append(`<hr> <div class="project-box"> ${imageBox + descriptionBox}  </div>`);
 }
 
-//create project boxes for each projectData element:
-projectsData.forEach((project, i) => {
-  createProjectBox(project, i+1);
+//Create project boxes for each projectData element:
+projectsData.forEach((project) => {
+  createProjectBox(project);
 });
 
-
+//Event listener to handle click:
 $('.thumb').on('click', handleClick);
-
+//Set thumb image as main image:
 function handleClick(event){
   const mainImage = event.target.parentElement.parentElement.children[0];
   mainImage.setAttribute('style', `background-image: url(${event.target.src})`);

@@ -39,6 +39,7 @@ body {
 
   hr {
     border-color: $detail-color;
+    margin: 0;
   }
 
   h2 {
@@ -136,37 +137,38 @@ section.projects {
 
   .project-box {
     display: flex;
-    height: 95vh;
-    justify-content: center;
-    // margin-bottom: 10vh;
+    height: 100vh;
+    justify-content: space-between;
   }
   .project-box:nth-child(odd){
     flex-direction: row-reverse;
   }
 
   .image {
-    width: 70%;
+    width: 65%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
     .mainImage {
       transition: all 1s;
-      width: 100%;
+      // min-width: 70%;
       // width: 100%;
-      min-height: 80%;
+      min-height: 70%;
       background-size: contain;
       background-repeat: no-repeat;
       display: inline-block;
     }
+
     article.image-thumbs {
       height: 20%;
       width: 100%;
-      background-color: red;
+      // background-color: rgba(255,255,255, 0.05);
       overflow: auto;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
-      img {
+      img.thumb {
         max-height: 100%;
         width: 200px;
       }
@@ -174,8 +176,11 @@ section.projects {
   }
 
   .description {
-    max-width: 30%;
+    max-width: 33%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
     div.title {
       position: relative;
@@ -183,6 +188,7 @@ section.projects {
       transition: all 1s;
       height: 15%;
       color: $text-color;
+      margin-top: 5%;
     }
     div.stack {
       position: relative;
@@ -201,6 +207,7 @@ section.projects {
       justify-content: space-between;
       height: 60%;
       overflow: scroll;
+      text-align: justify;
       div.links {
         i {
           color: $emphasis-color;
