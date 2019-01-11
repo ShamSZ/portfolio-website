@@ -120,8 +120,11 @@ section.projects {
 }
 section.projects .project-box {
   display: flex;
-  height: 90vh;
+  height: 95vh;
   justify-content: center;
+}
+section.projects .project-box:nth-child(odd) {
+  flex-direction: row-reverse;
 }
 section.projects .image {
   transition: all 1s;
@@ -138,6 +141,14 @@ section.projects .image article.image-thumbs {
   height: 20%;
   width: 100%;
   background-color: red;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.projects .image article.image-thumbs img {
+  max-height: 100%;
+  width: 200px;
 }
 section.projects .description {
   max-width: 30%;
@@ -146,19 +157,19 @@ section.projects .description {
 section.projects .description div.title {
   position: relative;
   top: 30%;
-  transition: all 2s;
+  transition: all 1s;
   height: 15%;
   color: #FFF4E0;
 }
 section.projects .description div.stack {
   position: relative;
   bottom: 35%;
-  transition: all 2s;
+  transition: all 1s;
   height: 15%;
   color: #FFF4E0;
 }
 section.projects .description div.text {
-  transition: opacity 2s;
+  transition: opacity 1s;
   opacity: 0;
   width: 95%;
   margin: 0 auto;
@@ -180,6 +191,7 @@ section.projects .description div.text div.links a:hover i {
 }
 section.projects .project-box:hover div.text {
   opacity: 1;
+  transition: opacity 2s;
 }
 section.projects .project-box:hover div.title {
   top: 0;

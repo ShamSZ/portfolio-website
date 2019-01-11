@@ -6,7 +6,8 @@ const projectsData = [
     launchLink: 'https://shamsz.github.io/wdi-project-one/',
     repoLink: 'https://github.com/ShamSZ/wdi-project-one',
     stack: 'HTML5, CSS3, JavaScript',
-    images: ['images/warp-factor2.png']
+    mainImage: 'images/warp-factor2.png',
+    images: ['images/warp-factor2.png', 'images/warp-factor.png']
   },
   {
     name: 'Rating Ninja',
@@ -15,6 +16,7 @@ const projectsData = [
     launchLink: 'https://rating-ninja.herokuapp.com/',
     repoLink: 'https://github.com/ShamSZ/wdi-project-two',
     stack: 'EJS, MongoDB, Express.js, Node.js',
+    mainImage: 'images/rating-ninja.png',
     images: ['images/rating-ninja.png']
   },
   {
@@ -24,6 +26,7 @@ const projectsData = [
     launchLink: 'https://eventz-planner.herokuapp.com/#!/',
     repoLink: 'https://github.com/ShamSZ/wdi-project-three',
     stack: 'HTML5, MongoDB, Express.js, AngularJS, Node.js, OpenStreetMap API, Mocha & Chai',
+    mainImage: 'images/eventz-planner.png',
     images: ['images/eventz-planner.png']
   },
   {
@@ -33,43 +36,54 @@ const projectsData = [
     launchLink: 'https://play-and-watch.herokuapp.com/',
     repoLink: 'https://github.com/ShamSZ/wdi-project-four',
     stack: 'HTML5, MongoDB, Express.js, React.js, Node.js, Mocha & Chai',
+    mainImage: 'images/play-and-watch.png',
     images: ['images/play-and-watch.png', 'images/play-and-watch.png']
   }
 ];
 
+// need to loop through projectsData and for each of the projects
+// create DOM elements
 
-const $projectSection = $('#projects');
-function createProjectBox(project){
-
+function createProjectBox(project, i){
+  //images
   function getThumbs(){
     const imageTags = project.images.map((image, i) => `<img src="${image}" alt="${project.name} image${i + 1}">`);
     return imageTags.join(',').replace(',', ' ');
   }
-  const mainImage = `<img src="${project.images[0]}" alt="${project.name} image">`;
+  const mainImage = `<img src="${project.mainImage}" class="project-${i}-img" alt="${project.name} image">`;
   const imageThumbs = `<article class="image-thumbs">${getThumbs()}</article>`;
   const imageBox = `<div class="image">   ${mainImage + imageThumbs} </div>`;
 
-  const title = `<div class="title"> <h3>${project.name}</h3> </div>`;
+
+  //links
   const launchLink = `<a target="_blank" href="${project.launchLink}"><i class="fas fa-external-link-alt"></i> Launch</a>`;
   const repoLink = `<a target="_blank" href="${project.repoLink}"><i class="fab fa-github"></i> Repo</a>`;
   const links = `<div class="links"> ${launchLink + repoLink}</div>`;
+
+  //description
   const firstParagraph = `<span>${project.firstParagraph}</span>`;
   const secondParagraph = `<span>${project.secondParagraph}</span>`;
+
+  //text
   const textBox = `<div class="text">   ${firstParagraph + secondParagraph + links} </div>`;
 
+  //title
+  const title = `<div class="title"> <h3>${project.name}</h3> </div>`;
+
+  //tech stack
   const stack = `<div class="stack"> <h4>Tech Stack: ${project.stack}</h4> </div>`;
 
+  //bringing it all together here:
   const descriptionBox = `<div class="description">${title + textBox + stack}</div>`;
 
-
-  $projectSection.append(`<div class="project-box"> ${imageBox + descriptionBox}  </div>`);
+  //adding it all to the projects section:
+  $('#projects').append(`<div class="project-box"> ${imageBox + descriptionBox}  </div>`);
 }
 
-//create 4 project boxes
-projectsData.forEach((project) => {
-  createProjectBox(project);
+//create project boxes for each projectData element:
+projectsData.forEach((project, i) => {
+  createProjectBox(project, i+1);
 });
 
-
-// need to loop through projectsData and for each of the projects
-// create DOM elements
+const $displayImage = $('.image');
+console.log($displayImage);
