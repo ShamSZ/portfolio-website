@@ -43,7 +43,7 @@ nav {
   display: flex;
   justify-content: center;
   height: 40px;
-  width: 300px;
+  width: 310px;
   position: fixed;
   transform: rotate(90deg);
   left: -135px;
@@ -54,22 +54,33 @@ nav {
 nav span {
   transition: all 1s;
   margin: 0 2px;
-  line-height: 30px;
   background-color: #F8B500;
-  padding: 5px;
-  width: 10px;
   overflow: hidden;
+  width: 10px;
+  padding: 0 5px;
+  position: relative;
+}
+nav span b {
+  width: 0;
+  background-color: #FC3C3C;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height: 4px;
+  font-size: 0;
+  transition: all 0;
 }
 nav span a {
-  vertical-align: middle;
+  line-height: 40px;
+  padding: 5px;
   color: #F8B500;
 }
 nav span.active, nav span:hover {
-  width: 120px;
+  font-weight: 700;
+  width: 130px;
 }
 nav span.active a, nav span:hover a {
   color: #393E46;
-  font-weight: 700;
   font-size: 22px;
 }
 
@@ -79,8 +90,8 @@ div.contact {
   align-items: center;
   position: fixed;
   top: 40vh;
-  right: 15px;
-  height: 200px;
+  right: 20px;
+  height: 210px;
   width: 30px;
   flex-wrap: wrap;
 }

@@ -60,7 +60,7 @@ nav {
   display: flex;
   justify-content: center;
   height: 40px;
-  width: 300px;
+  width: 310px;
   position: fixed;
   transform: rotate(90deg);
   left: -135px;
@@ -70,23 +70,37 @@ nav {
   span {
     transition: all 1s;
     margin: 0 2px;
-    line-height: 30px;
     background-color: $thumb-color;
-    padding: 5px;
-    width: 10px;
     overflow: hidden;
+    width: 10px;
+    padding: 0 5px;
+    position: relative;
+    b {
+      width: 0;
+      background-color: $emphasis-color;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      line-height: 4px;
+      font-size: 0;
+      // overflow: hidden;
+      // margin: 0 5px;
+      // padding: 0 5px;
+      transition: all 0;
+    }
     a {
-      vertical-align: middle;
+      line-height: 40px;
+      padding: 5px;
       color: $thumb-color;
     }
   }
   span.active, span:hover {
+    font-weight: 700;
     a {
       color: $bg-color;
-      font-weight: 700;
       font-size: 22px;
     }
-    width: 120px;
+    width: 130px;
   }
 }
 
@@ -96,8 +110,8 @@ div.contact {
   align-items: center;
   position: fixed;
   top: 40vh;
-  right: 15px;
-  height: 200px;
+  right: 20px;
+  height: 210px;
   width: 30px;
   flex-wrap: wrap;
   p {
