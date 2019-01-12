@@ -1,21 +1,19 @@
 const style1 =
     'color: #FC3C3C;' +
     'font-family: Helvetica;' +
-    'font-size: 14px;';
+    'font-size: 12px;';
 const style2 =
     'color: #393E46;' +
-    'font-size: 16px;' +
+    'font-size: 14px;' +
     'font-weight: bold;';
 
-console.log('%cHello there! 👋', style1);
-console.log('%cThanks for checking out my website.', style1);
-console.log('%cIf you want to get in touch, contact me on the below:', style1);
+console.log('%cPsst... you there! 👋', style1);
+console.log('%cThanks for checking out my website. I built this from scratch using HTML, Sass, Canvas and jQuery.', style1);
+console.log('%cIf you\'d like to get in touch, contact me on the below:', style1);
 console.log('%csham.szoda@gmail.com', style2);
 console.log('%cor', style1);
 console.log('%clinkedin.com/in/ShamSZ', style2);
 
-// console.log('Psst... you there!');
-// console.log('Thanks for checking my website out. If you want to get in touch, go to the about section');
 const sections = [ '#home', '#projects', '#about'];
 let currentSection = 0;
 let fromTop = 0;

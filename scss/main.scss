@@ -59,32 +59,34 @@ body {
 nav {
   display: flex;
   justify-content: center;
-  height: 30px;
-  width: 250px;
+  height: 40px;
+  width: 300px;
   position: fixed;
   transform: rotate(90deg);
-  left: -110px;
+  left: -135px;
   margin-left: 15px;
   top: 50vh;
   text-transform: uppercase;
   span {
     transition: all 1s;
     margin: 0 2px;
-    a {
-      vertical-align: middle;
-      color: $thumb-color;
-    }
+    line-height: 30px;
     background-color: $thumb-color;
     padding: 5px;
     width: 10px;
     overflow: hidden;
+    a {
+      vertical-align: middle;
+      color: $thumb-color;
+    }
   }
   span.active, span:hover {
     a {
       color: $bg-color;
       font-weight: 700;
+      font-size: 22px;
     }
-    width: 90px;
+    width: 120px;
   }
 }
 
@@ -95,16 +97,19 @@ div.contact {
   position: fixed;
   top: 40vh;
   right: 15px;
-  height: 25%;
+  height: 200px;
   width: 30px;
   flex-wrap: wrap;
   p {
     box-sizing: border-box;
     margin: 2px 0;
     background-color: $thumb-color;
-    width: 30px;
-    height: 30px;
-    font-size: 21px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    font-size: 31px;
+    font-weight: bold;
+    line-height: 21px;
     a {
       color: $bg-color;
       vertical-align: middle;
@@ -144,30 +149,27 @@ section.projects {
     flex-direction: row-reverse;
   }
 
-  .image {
+  div.image {
     width: 65%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-
-    .mainImage {
+    justify-content: center;
+    height: 100%;
+    div.mainImage {
       transition: all 1s;
-      // min-width: 70%;
-      // width: 100%;
-      min-height: 70%;
+      height: 60%;
+      min-width: 100%;
       background-size: contain;
       background-repeat: no-repeat;
       display: inline-block;
+      margin-bottom: 5px;
     }
 
     article.image-thumbs {
       height: 20%;
       width: 100%;
-      // background-color: rgba(255,255,255, 0.05);
       overflow: auto;
       display: flex;
-      // justify-content: flex-start;
-      align-items: center;
       img.thumb {
         margin-right: 10px;
         max-height: 100%;
@@ -190,6 +192,7 @@ section.projects {
       height: 15%;
       color: $text-color;
       margin-top: 5%;
+      font-size: 28px;
     }
     div.stack {
       position: relative;
@@ -205,10 +208,13 @@ section.projects {
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
       height: 60%;
       overflow: scroll;
       text-align: justify;
+      p {
+        line-height: 20px;
+      }
       div.links {
         i {
           color: $emphasis-color;
@@ -230,11 +236,11 @@ section.projects {
       transition: opacity 2s;
     }
     div.title {
-      top: 0;
+      top: 5%;
       color: $detail-color;
     }
     div.stack {
-      bottom: 0;
+      bottom: 2%;
       color: $detail-color;
     }
   }

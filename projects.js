@@ -6,7 +6,7 @@ const projectsData = [
     launchLink: 'https://shamsz.github.io/wdi-project-one/',
     repoLink: 'https://github.com/ShamSZ/wdi-project-one',
     stack: 'HTML5, CSS3, JavaScript',
-    images: ['images/project1/warp-factor.png', 'images/project1/home.png', 'images/project1/gamemode.png', 'images/project1/shipselect.png', 'images/project1/briefing.png', 'images/project1/warp-factor-demo.gif', 'images/project1/pausemenu.png', 'images/project1/score.png']
+    images: ['images/project1/warp-factor.png', 'images/project1/home.png', 'images/project1/gamemode.png', 'images/project1/shipselect.png', 'https://i.imgur.com/lllBY6a.gif']
   },
   {
     name: 'Rating Ninja',
@@ -15,7 +15,6 @@ const projectsData = [
     launchLink: 'https://rating-ninja.herokuapp.com/',
     repoLink: 'https://github.com/ShamSZ/wdi-project-two',
     stack: 'EJS, MongoDB, Express.js, Node.js',
-    mainImage: 'images/rating-ninja.png',
     images: ['images/rating-ninja.png']
   },
   {
@@ -61,11 +60,11 @@ function createProjectBox(project){
   const links = `<div class="links"> ${launchLink + repoLink}</div>`;
 
   //description
-  const firstParagraph = `<span>${project.firstParagraph}</span>`;
-  const secondParagraph = `<span>${project.secondParagraph}</span>`;
+  const firstParagraph = `<p>${project.firstParagraph}</p>`;
+  const secondParagraph = `<p>${project.secondParagraph}</p>`;
 
   //text
-  const textBox = `<div class="text">   ${firstParagraph + secondParagraph + links} </div>`;
+  const textBox = `<div class="text">   <div>${firstParagraph + secondParagraph}</div> ${links} </div>`;
 
   //title
   const title = `<div class="title"> <h3>${project.name}</h3> </div>`;
@@ -77,7 +76,7 @@ function createProjectBox(project){
   const descriptionBox = `<div class="description">${title + textBox + stack}</div>`;
 
   //adding it all to the projects section:
-  $('#projects').append(`<hr> <div class="project-box"> ${imageBox + descriptionBox}  </div>`);
+  $('#projects').append(`<div class="project-box"> ${imageBox + descriptionBox}  </div>`);
 }
 
 //Create project boxes for each projectData element:
