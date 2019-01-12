@@ -15,7 +15,7 @@ const projectsData = [
     launchLink: 'https://rating-ninja.herokuapp.com/',
     repoLink: 'https://github.com/ShamSZ/wdi-project-two',
     stack: 'EJS, MongoDB, Express.js, Node.js',
-    images: ['images/rating-ninja.png']
+    images: ['images/project2/index1.png', 'images/project2/home.png', 'images/project2/register.png', 'images/project2/show1.png', 'images/project2/show2.png', 'images/project2/edit.png', 'images/project2/profile1.png', 'images/project2/profile-edit.png']
   },
   {
     name: 'EventZ',
@@ -24,8 +24,7 @@ const projectsData = [
     launchLink: 'https://eventz-planner.herokuapp.com/#!/',
     repoLink: 'https://github.com/ShamSZ/wdi-project-three',
     stack: 'HTML5, MongoDB, Express.js, AngularJS, Node.js, OpenStreetMap API, Mocha & Chai',
-    mainImage: 'images/eventz-planner.png',
-    images: ['images/eventz-planner.png']
+    images: ['images/project3/home.png', 'images/project3/mobile1.png', 'images/project3/mobile2.png', 'images/project3/map.png', 'images/project3/register.png', 'images/project3/profile.png', 'images/project3/profile-edit.png']
   },
   {
     name: 'Play & Watch',
@@ -35,7 +34,7 @@ const projectsData = [
     repoLink: 'https://github.com/ShamSZ/wdi-project-four',
     stack: 'HTML5, MongoDB, Express.js, React.js, Node.js, Mocha & Chai',
     mainImage: 'images/play-and-watch.png',
-    images: ['images/play-and-watch.png', 'images/project4.gif']
+    images: ['images/project4/index2.png', 'images/project4/index1.png', 'images/project4/show1.png', 'images/project4/show2.png', 'images/project4/basket.png', 'images/project4/admin.png', 'images/project4/add.png', 'images/project4/statistics.png']
   }
 ];
 
