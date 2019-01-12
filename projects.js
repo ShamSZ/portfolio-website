@@ -33,7 +33,6 @@ const projectsData = [
     launchLink: 'https://play-and-watch.herokuapp.com/',
     repoLink: 'https://github.com/ShamSZ/wdi-project-four',
     stack: 'HTML5, MongoDB, Express.js, React.js, Node.js, Mocha & Chai',
-    mainImage: 'images/play-and-watch.png',
     images: ['images/project4/index2.png', 'images/project4/index1.png', 'images/project4/show1.png', 'images/project4/show2.png', 'images/project4/basket.png', 'images/project4/admin.png', 'images/project4/add.png', 'images/project4/statistics.png']
   }
 ];
@@ -83,10 +82,28 @@ projectsData.forEach((project) => {
   createProjectBox(project);
 });
 
+//On load, set active class to first image:
+for(let i = 0; i < projectsData.length; i++){
+  $('.image-thumbs').eq(i).children().eq(0).addClass('active');
+}
+
+// console.log(document.querySelectorAll('.image-thumbs')[0].firstChild);
+
+
 //Event listener to handle click:
-$('.thumb').on('click', handleClick);
+$('.thumb').click(handleClick);
+
 //Set thumb image as main image:
-function handleClick(event){
-  const mainImage = event.target.parentElement.parentElement.children[0];
-  mainImage.setAttribute('style', `background-image: url(${event.target.src})`);
+function handleClick(){
+
+  const $thumbs = $(this).closest('.image').children().eq(1);
+
+  $thumbs.children('img').each(function () {
+    $(this).removeClass('active');
+  });
+
+  const $mainImage = $(this).closest('.image').children().eq(0);
+  $mainImage.attr('style', `background-image: url(${this.src})`);
+
+  $(this).addClass('active');
 }
