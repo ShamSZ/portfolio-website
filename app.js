@@ -1,12 +1,11 @@
 const style1 =
-    'color: #FC3C3C;' +
-    'font-family: Helvetica;' +
-    'font-size: 12px;';
+'color: #FC3C3C;' +
+'font-family: Helvetica;' +
+'font-size: 12px;';
 const style2 =
-    'color: #393E46;' +
-    'font-size: 14px;' +
-    'font-weight: bold;';
-
+'color: #393E46;' +
+'font-size: 14px;' +
+'font-weight: bold;';
 
 console.log('%cPsst... you there! 👋', style1);
 console.log('%cThanks for checking out my website. I built this from scratch using HTML, Sass, Canvas and jQuery.', style1);
@@ -60,6 +59,15 @@ $(window).on('scroll', () => {
     $('b.percentage').css('width', '0');
   }
 });
+
+$navLink.click(scrollTo);
+function scrollTo(){
+  const target = `#${$(this).children().eq(0).html().toLowerCase()}`;
+  $(target)[0].scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+}
 
 function setPosPercentage(fromTop){
   //Getting the total height of the Projects Section
