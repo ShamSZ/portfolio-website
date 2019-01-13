@@ -18,7 +18,7 @@ console.log('%clinkedin.com/in/ShamSZ', style2);
 const sections = [ '#home', '#projects', '#about'];
 let currentSection = 0;
 let fromTop = 0;
-const $navLink = $('.navLink');
+const $navLink = $('.nav-link');
 
 handleResize();
 $(window).on('resize', handleResize);

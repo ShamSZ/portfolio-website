@@ -75,6 +75,7 @@ nav {
     width: 10px;
     padding: 0 5px;
     position: relative;
+    font-weight: 700;
     b {
       width: 0;
       background-color: $emphasis-color;
@@ -83,10 +84,9 @@ nav {
       left: 0;
       line-height: 4px;
       font-size: 0;
-      // overflow: hidden;
-      // margin: 0 5px;
-      // padding: 0 5px;
-      transition: all 0;
+      opacity: 0.9;
+      overflow: hidden;
+      padding: 0;
     }
     a {
       line-height: 40px;
@@ -95,7 +95,6 @@ nav {
     }
   }
   span.active, span:hover {
-    font-weight: 700;
     a {
       color: $bg-color;
       font-size: 22px;
