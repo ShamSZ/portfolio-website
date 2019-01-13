@@ -1,0 +1,16 @@
+section.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .text {
+    text-transform: uppercase;
+    h1 {
+      font-size: 45px;
+      color: $text-color;
+    }
+    h2 {
+      color: $detail-color;
+    }
+  }
+}

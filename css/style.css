@@ -1,89 +1,56 @@
-canvas {
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  top: 0;
-  opacity: 1;
-}
-
-body {
-  text-align: center;
-  background-color: #393E46;
-  color: #FFF4E0;
-  font-family: Helvetica, sans-serif;
+section.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100vh;
-  width: 100vw;
-  margin: 5px auto;
-}
-body main {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
-body main a:hover {
+section.about div.profile-pic img {
+  border-radius: 50%;
+  max-height: 200px;
+}
+section.about div.bio {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
+section.about div.text {
+  max-width: 60%;
+}
+section.about div.icon-links {
+  color: #00ADB5;
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+section.about div.icon-links h4 {
+  text-transform: uppercase;
+}
+section.about div.icon-links a {
+  color: #FFF4E0;
+}
+section.about div.icon-links a:hover {
   color: #FC3C3C;
 }
-body a {
-  text-decoration: none;
-  color: #FFF4E0;
+section.about div.tech-box p {
+  color: #00ADB5;
 }
-body hr {
-  border-color: #00ADB5;
-  margin: 0;
-}
-body h2 {
-  color: #FFF4E0;
-  font-size: 30px;
-  text-transform: uppercase;
-}
-body .about-header h2, body .projects h2 {
-  margin-bottom: 0;
-}
-
-nav {
+section.about div.tech, section.about div.skills {
   display: flex;
   justify-content: center;
-  height: 40px;
-  width: 310px;
-  position: fixed;
-  transform: rotate(90deg);
-  left: -135px;
-  margin-left: 15px;
-  top: 50vh;
-  text-transform: uppercase;
+  flex-wrap: wrap;
 }
-nav span {
-  transition: all 1s;
-  margin: 0 2px;
-  background-color: #F8B500;
-  overflow: hidden;
-  width: 10px;
-  padding: 0 5px;
-  position: relative;
-  font-weight: 700;
+section.about div.tech i, section.about div.tech b, section.about div.skills i, section.about div.skills b {
+  color: #00ADB5;
 }
-nav span b {
-  width: 0;
-  background-color: #FC3C3C;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  line-height: 4px;
-  font-size: 0;
-  opacity: 0.9;
-  overflow: hidden;
-  padding: 0;
+section.about div.tech span, section.about div.skills span {
+  padding: 10px 0;
+  width: 25%;
 }
-nav span a {
-  line-height: 40px;
-  padding: 5px;
-  color: #F8B500;
-}
-nav span.active, nav span:hover {
-  width: 130px;
-}
-nav span.active a, nav span:hover a {
-  color: #393E46;
-  font-size: 22px;
+section.about div.tech img, section.about div.skills img {
+  height: 16px;
+  vertical-align: middle;
 }
 
 div.contact {
@@ -131,6 +98,53 @@ section.header .text h1 {
 }
 section.header .text h2 {
   color: #00ADB5;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 310px;
+  position: fixed;
+  transform: rotate(90deg);
+  left: -135px;
+  margin-left: 15px;
+  top: 50vh;
+  text-transform: uppercase;
+}
+nav span {
+  transition: all 1s;
+  margin: 0 2px;
+  background-color: #F8B500;
+  overflow: hidden;
+  width: 10px;
+  padding: 0 5px;
+  position: relative;
+  font-weight: 700;
+}
+nav span b {
+  width: 0;
+  background-color: #FC3C3C;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height: 4px;
+  font-size: 0;
+  opacity: 0.9;
+  overflow: hidden;
+  padding: 0;
+}
+nav span a {
+  line-height: 40px;
+  padding: 5px;
+  color: #F8B500;
+}
+nav span.active, nav span:hover {
+  width: 130px;
+}
+nav span.active a, nav span:hover a {
+  color: #393E46;
+  font-size: 22px;
 }
 
 section.projects {
@@ -239,59 +253,45 @@ section.projects .project-box:hover div.stack {
   color: #00ADB5;
 }
 
-section.about {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  width: 100%;
-  margin: 0 auto;
+canvas {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  opacity: 1;
 }
-section.about div.profile-pic img {
-  border-radius: 50%;
-  max-height: 200px;
-}
-section.about div.bio {
-  display: flex;
-  justify-content: space-around;
-  width: 80%;
-  margin: 0 auto;
-}
-section.about div.text {
-  max-width: 60%;
-}
-section.about div.icon-links {
-  color: #00ADB5;
-  font-size: 22px;
-  margin-bottom: 24px;
-}
-section.about div.icon-links h4 {
-  text-transform: uppercase;
-}
-section.about div.icon-links a {
+
+body {
+  text-align: center;
+  background-color: #393E46;
   color: #FFF4E0;
+  font-family: Helvetica, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  margin: 5px auto;
 }
-section.about div.icon-links a:hover {
+body main {
+  width: 90%;
+  margin: 0 auto;
+}
+body main a:hover {
   color: #FC3C3C;
 }
-section.about div.tech-box p {
-  color: #00ADB5;
+body a {
+  text-decoration: none;
+  color: #FFF4E0;
 }
-section.about div.tech, section.about div.skills {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+body hr {
+  border-color: #00ADB5;
+  margin: 0;
 }
-section.about div.tech i, section.about div.tech b, section.about div.skills i, section.about div.skills b {
-  color: #00ADB5;
+body h2 {
+  color: #FFF4E0;
+  font-size: 30px;
+  text-transform: uppercase;
 }
-section.about div.tech span, section.about div.skills span {
-  padding: 10px 0;
-  width: 25%;
-}
-section.about div.tech img, section.about div.skills img {
-  height: 16px;
-  vertical-align: middle;
+body .about-header h2, body .projects h2 {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

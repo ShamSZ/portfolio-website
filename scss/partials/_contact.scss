@@ -1,0 +1,29 @@
+div.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 40vh;
+  right: 20px;
+  height: 210px;
+  width: 30px;
+  flex-wrap: wrap;
+  p {
+    box-sizing: border-box;
+    margin: 2px 0;
+    background-color: $thumb-color;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    font-size: 31px;
+    font-weight: bold;
+    line-height: 21px;
+    a {
+      color: $bg-color;
+      vertical-align: middle;
+      i {
+        vertical-align: middle;
+      }
+    }
+  }
+}

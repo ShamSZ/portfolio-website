@@ -1,0 +1,58 @@
+section.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  div.profile-pic {
+    img {
+      border-radius: 50%;
+      max-height: 200px;
+    }
+  }
+  div.bio {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+  }
+  div.text {
+    max-width: 60%;
+  }
+  div.icon-links {
+    color: $detail-color;
+    font-size: 22px;
+    margin-bottom: 24px;
+    h4 {
+      text-transform: uppercase;
+    }
+    a {
+      color: $text-color;
+    }
+    a:hover {
+      color: $emphasis-color;
+    }
+  }
+  div.tech-box {
+    p {
+      color: $detail-color;
+    }
+  }
+  div.tech, div.skills {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    i, b {
+      color: $detail-color;
+    }
+    span {
+      padding: 10px 0;
+      width: 25%;
+    }
+    img {
+      height: 16px;
+      vertical-align: middle;
+    }
+  }
+}

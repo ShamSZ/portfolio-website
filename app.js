@@ -17,10 +17,13 @@ console.log('%clinkedin.com/in/ShamSZ', style2);
 const sections = [ '#home', '#projects', '#about'];
 let currentSection = 0;
 let fromTop = 0;
-const $navLink = $('.nav-link');
+const $navLinks = $('.nav-link');
 
 handleResize();
+
 $(window).on('resize', handleResize);
+$(window).on('scroll', handleScroll);
+$navLinks.click(scrollTo);
 
 function handleResize(){
   const $navHeight = $('nav').css('height').replace('px', '');
@@ -30,15 +33,14 @@ function handleResize(){
   $('.contact').css('top', `${window.innerHeight / 2 - $contactHeight / 2}px`);
 }
 
-
-$(window).on('scroll', () => {
+function handleScroll(){
   const halfway = window.innerHeight / 2;
   fromTop = $(window).scrollTop();
   if(fromTop > $(sections[0]).offset().top - halfway
   && fromTop < $(sections[1]).offset().top - halfway) {
     currentSection = 0;
-    $navLink.removeClass('active');
-    $navLink.eq(currentSection).addClass('active');
+    $navLinks.removeClass('active');
+    $navLinks.eq(currentSection).addClass('active');
 
     //reset width of percentage bar to 0:
     $('b.percentage').css('width', '0');
@@ -47,20 +49,21 @@ $(window).on('scroll', () => {
   && fromTop < $(sections[2]).offset().top - halfway) {
     setPosPercentage(fromTop);
     currentSection = 1;
-    $navLink.removeClass('active');
-    $navLink.eq(currentSection).addClass('active');
+    $navLinks.removeClass('active');
+    $navLinks.eq(currentSection).addClass('active');
 
   } else if(fromTop > $(sections[2]).offset().top - halfway) {
     currentSection = 2;
-    $navLink.removeClass('active');
-    $navLink.eq(currentSection).addClass('active');
+    $navLinks.removeClass('active');
+    $navLinks.eq(currentSection).addClass('active');
 
     //reset width of percentage bar to 0:
     $('b.percentage').css('width', '0');
   }
-});
+}
 
-$navLink.click(scrollTo);
+
+
 function scrollTo(){
   const target = `#${$(this).children().eq(0).html().toLowerCase()}`;
   $(target)[0].scrollIntoView({
