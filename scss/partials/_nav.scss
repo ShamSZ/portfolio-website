@@ -7,8 +7,8 @@ nav {
   transform: rotate(90deg);
   left: -155px;
   margin-left: 15px;
-  top: 50vh;
   text-transform: uppercase;
+  z-index: 5;
   span {
     transition: all 1s;
     margin: 0 2px;
@@ -18,29 +18,28 @@ nav {
     padding: 0 5px;
     position: relative;
     font-weight: 700;
-    b {
-      width: 0;
+    b.progress {
       background-color: $emphasis-color;
       position: absolute;
       bottom: 0;
       left: 0;
       line-height: 4px;
       font-size: 0;
-      opacity: 0.9;
       overflow: hidden;
-      padding: 0;
     }
     a {
       line-height: 40px;
       padding: 5px;
       color: $thumb-color;
+      font-size: 22px;
     }
   }
+
   span.active, span:hover {
     a {
       color: $bg-color;
-      font-size: 22px;
     }
+    cursor: pointer;
     width: 130px;
   }
 }
@@ -50,5 +49,20 @@ nav {
   nav {
     transform: rotate(0deg);
     margin-left: 0;
+    height: 20px;
+    position: absolute;
+    span, span.active {
+      width: 130px;
+      a {
+        padding: 0;
+        color: $bg-color;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      opacity: 0.5;
+    }
+    span.active, span:hover {
+      opacity: 1;
+   }
   }
 }

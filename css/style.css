@@ -124,8 +124,8 @@ nav {
   transform: rotate(90deg);
   left: -155px;
   margin-left: 15px;
-  top: 50vh;
   text-transform: uppercase;
+  z-index: 5;
 }
 nav span {
   transition: all 1s;
@@ -137,35 +137,48 @@ nav span {
   position: relative;
   font-weight: 700;
 }
-nav span b {
-  width: 0;
+nav span b.progress {
   background-color: #FC3C3C;
   position: absolute;
   bottom: 0;
   left: 0;
   line-height: 4px;
   font-size: 0;
-  opacity: 0.9;
   overflow: hidden;
-  padding: 0;
 }
 nav span a {
   line-height: 40px;
   padding: 5px;
   color: #F8B500;
+  font-size: 22px;
 }
 nav span.active, nav span:hover {
+  cursor: pointer;
   width: 130px;
 }
 nav span.active a, nav span:hover a {
   color: #393E46;
-  font-size: 22px;
 }
 
 @media screen and (max-width: 600px) {
   nav {
     transform: rotate(0deg);
     margin-left: 0;
+    height: 20px;
+    position: absolute;
+  }
+  nav span, nav span.active {
+    width: 130px;
+    opacity: 0.5;
+  }
+  nav span a, nav span.active a {
+    padding: 0;
+    color: #393E46;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  nav span.active, nav span:hover {
+    opacity: 1;
   }
 }
 section.projects {
@@ -274,6 +287,11 @@ section.projects .project-box:hover div.stack {
   color: #00ADB5;
 }
 
+@media screen and (max-width: 600px) {
+  .hr-projects {
+    visibility: hidden;
+  }
+}
 canvas {
   position: absolute;
   z-index: -1;

@@ -15,31 +15,33 @@ console.log('%cor', style1);
 console.log('%clinkedin.com/in/ShamSZ', style2);
 
 const sections = [ '#home', '#projects', '#about'];
-let currentSection = 0;
 let fromTop = 0;
 const $navLinks = $('.nav-link');
 const mobileBreakpoint = 600;
 
-handleResize();
+handleMobileResize();
 
-$(window).on('resize', handleResize);
+$(window).on('resize', handleMobileResize);
 $(window).on('scroll', handleScroll);
 $navLinks.click(scrollTo);
 
-function handleResize(){
+function handleMobileResize(){
   const $navHeight = $('nav').css('height').replace('px', '');
   const $navWidth = $('nav').css('width').replace('px', '');
   const $contactHeight = $('.contact').css('height').replace('px', '');
 
   if (window.innerWidth > mobileBreakpoint){
-    $('nav').css('top', `${window.innerHeight / 2 - $navHeight / 2}px`);
+    //Not mobile
     $('nav').css('left', `${$navHeight / 2 - $navWidth / 2}px`);
+    $('nav').css('top', `${window.innerHeight / 2 - $navHeight / 2}px`);
 
     $('.contact').css('top', `${window.innerHeight / 2 - $contactHeight / 2}px`);
   } else {
+    //Mobile
+    $('nav').css('top', '100vh');
     $('nav').css('left', `${window.innerWidth / 2 - $navWidth / 2}px`);
-    $('nav').css('top', '5px');
   }
+  handleScroll();
 }
 
 function handleScroll(){
@@ -47,31 +49,45 @@ function handleScroll(){
   fromTop = $(window).scrollTop();
   if(fromTop > $(sections[0]).offset().top - halfway
   && fromTop < $(sections[1]).offset().top - halfway) {
-    currentSection = 0;
-    $navLinks.removeClass('active');
-    $navLinks.eq(currentSection).addClass('active');
-
+    toggleActiveSection(0);
     //reset width of percentage bar to 0:
-    $('b.percentage').css('width', '0');
+    $('b.progress').css('width', '0');
 
   } else if(fromTop > $(sections[1]).offset().top - halfway
   && fromTop < $(sections[2]).offset().top - halfway) {
     setPosPercentage(fromTop);
-    currentSection = 1;
-    $navLinks.removeClass('active');
-    $navLinks.eq(currentSection).addClass('active');
+    toggleActiveSection(1);
 
   } else if(fromTop > $(sections[2]).offset().top - halfway) {
-    currentSection = 2;
-    $navLinks.removeClass('active');
-    $navLinks.eq(currentSection).addClass('active');
+    toggleActiveSection(2);
 
     //reset width of percentage bar to 0:
-    $('b.percentage').css('width', '0');
+    $('b.progress').css('width', '0');
+  }
+  navOnMobile();
+}
+
+function navOnMobile(){
+  if(window.innerWidth <= mobileBreakpoint){
+    //If mobile
+    if (fromTop > window.innerHeight) {
+      //if scrolled past the home section, stick nav to 5px from top of page
+      $('nav').css('position', 'fixed');
+      $('nav').css('top', '5px');
+    } else {
+      //if on the home section, hide nav just below home section
+      $('nav').css('position', 'absolute');
+      $('nav').css('top', '100vh');
+    }
+  } else {
+    $('nav').css('position', 'fixed');
   }
 }
 
-
+function toggleActiveSection(currentSection){
+  $navLinks.removeClass('active');
+  $navLinks.eq(currentSection).addClass('active');
+}
 
 function scrollTo(){
   const target = `#${$(this).children().eq(0).html().toLowerCase()}`;
@@ -96,5 +112,5 @@ function setPosPercentage(fromTop){
   //now I just compare that to the projectsHeight and turn it into a percentage:
   const currentPosPercentage = Math.round((pixelsFromStart / projectsHeight) * 100);
   //set bar width to currentPosPercentage:
-  $('b.percentage').css('width', `${currentPosPercentage}%`);
+  $('b.progress').css('width', `${currentPosPercentage}%`);
 }

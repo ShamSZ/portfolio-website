@@ -113,3 +113,8 @@ section.projects {
     }
   }
 }
+@media screen and (max-width: 600px) {
+  .hr-projects {
+    visibility: hidden;
+  }
+}
