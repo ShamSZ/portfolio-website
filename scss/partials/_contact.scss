@@ -27,3 +27,10 @@ div.contact {
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  // check app.js for responsive code
+  div.contact {
+    visibility: hidden;
+  }
+}

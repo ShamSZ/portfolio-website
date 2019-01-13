@@ -40,14 +40,4 @@ body {
     border-color: $detail-color;
     margin: 0;
   }
-  h2 {
-    color: $text-color;
-    font-size: 30px;
-    text-transform: uppercase;
-  }
-  .about-header, .projects{
-    h2 {
-      margin-bottom: 0;
-    }
-  }
 }

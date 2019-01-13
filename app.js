@@ -18,6 +18,7 @@ const sections = [ '#home', '#projects', '#about'];
 let currentSection = 0;
 let fromTop = 0;
 const $navLinks = $('.nav-link');
+const mobileBreakpoint = 600;
 
 handleResize();
 
@@ -27,10 +28,18 @@ $navLinks.click(scrollTo);
 
 function handleResize(){
   const $navHeight = $('nav').css('height').replace('px', '');
+  const $navWidth = $('nav').css('width').replace('px', '');
   const $contactHeight = $('.contact').css('height').replace('px', '');
 
-  $('nav').css('top', `${window.innerHeight / 2 - $navHeight / 2}px`);
-  $('.contact').css('top', `${window.innerHeight / 2 - $contactHeight / 2}px`);
+  if (window.innerWidth > mobileBreakpoint){
+    $('nav').css('top', `${window.innerHeight / 2 - $navHeight / 2}px`);
+    $('nav').css('left', `${$navHeight / 2 - $navWidth / 2}px`);
+
+    $('.contact').css('top', `${window.innerHeight / 2 - $contactHeight / 2}px`);
+  } else {
+    $('nav').css('left', `${window.innerWidth / 2 - $navWidth / 2}px`);
+    $('nav').css('top', '5px');
+  }
 }
 
 function handleScroll(){

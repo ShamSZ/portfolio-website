@@ -11,6 +11,23 @@ section.header {
     }
     h2 {
       color: $detail-color;
+      font-size: 30px;
+    }
+  }
+}
+
+/* Media Queries */
+
+
+@media screen and (max-width: 800px) {
+  section.header {
+    .text {
+      h1 {
+        font-size: 30px;
+      }
+      h2 {
+        font-size: 20px;
+      }
     }
   }
 }
