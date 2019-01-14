@@ -3,9 +3,7 @@ nav {
   justify-content: center;
   height: 40px;
   width: 310px;
-  position: fixed;
   transform: rotate(90deg);
-  left: -155px;
   margin-left: 15px;
   text-transform: uppercase;
   z-index: 5;
@@ -16,8 +14,14 @@ nav {
     overflow: hidden;
     width: 10px;
     padding: 0 5px;
-    position: relative;
     font-weight: 700;
+    position: relative;
+    a {
+      line-height: 40px;
+      padding: 5px;
+      color: $thumb-color;
+      font-size: 22px;
+    }
     b.progress {
       background-color: $emphasis-color;
       position: absolute;
@@ -26,12 +30,6 @@ nav {
       line-height: 4px;
       font-size: 0;
       overflow: hidden;
-    }
-    a {
-      line-height: 40px;
-      padding: 5px;
-      color: $thumb-color;
-      font-size: 22px;
     }
   }
 

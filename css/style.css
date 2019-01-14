@@ -120,9 +120,7 @@ nav {
   justify-content: center;
   height: 40px;
   width: 310px;
-  position: fixed;
   transform: rotate(90deg);
-  left: -155px;
   margin-left: 15px;
   text-transform: uppercase;
   z-index: 5;
@@ -134,8 +132,14 @@ nav span {
   overflow: hidden;
   width: 10px;
   padding: 0 5px;
-  position: relative;
   font-weight: 700;
+  position: relative;
+}
+nav span a {
+  line-height: 40px;
+  padding: 5px;
+  color: #F8B500;
+  font-size: 22px;
 }
 nav span b.progress {
   background-color: #FC3C3C;
@@ -145,12 +149,6 @@ nav span b.progress {
   line-height: 4px;
   font-size: 0;
   overflow: hidden;
-}
-nav span a {
-  line-height: 40px;
-  padding: 5px;
-  color: #F8B500;
-  font-size: 22px;
 }
 nav span.active, nav span:hover {
   cursor: pointer;
