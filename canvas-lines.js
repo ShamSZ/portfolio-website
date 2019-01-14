@@ -17,8 +17,10 @@ const mouse = {
 
 window.addEventListener('resize', handleResize);
 window.addEventListener('mousemove', handleMouseMove);
-window.addEventListener('touchmove', handleTouchMove);
-window.addEventListener('touchend', handleTouchEnd);
+window.addEventListener('touchmove', handleTouchMove, false);
+window.addEventListener('touchstart', handleTouchMove, false);
+window.addEventListener('touchend', handleTouchEnd, false);
+window.addEventListener('touchcancel', handleTouchEnd, false);
 
 function handleResize(){
   canvas.width = window.innerWidth;
@@ -32,16 +34,15 @@ function handleMouseMove(event){
 }
 
 function handleTouchMove(event) {
-  const touches = event.changedTouches;
-  mouse.x = touches[touches.length - 1].screenX;
-  mouse.y = touches[touches.length - 1].screenY;
+  const touches = event.touches[0];
+  mouse.x = touches.clientX;
+  mouse.y = touches.clientY;
+
 }
 
 function handleTouchEnd() {
-  setTimeout(() => {
-    mouse.x = undefined;
-    mouse.y = undefined;
-  }, 500);
+  mouse.x = undefined;
+  mouse.y = undefined;
 }
 
 function init(){
