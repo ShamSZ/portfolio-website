@@ -1,28 +1,34 @@
 section.about {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100vh;
   width: 100%;
   margin: 0 auto;
 }
-section.about div.profile-pic img {
-  border-radius: 50%;
-  max-height: 200px;
-}
 section.about div.bio {
-  display: flex;
-  justify-content: space-around;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 35%;
 }
-section.about div.text {
-  max-width: 60%;
+section.about div.bio img {
+  width: 25%;
+  border-radius: 50%;
+  margin-top: 35px;
+}
+section.about div.bio div.text {
+  width: 65%;
 }
 section.about div.icon-links {
   color: #00ADB5;
   font-size: 22px;
-  margin-bottom: 24px;
+}
+section.about div.icon-links h4, section.about div.icon-links p {
+  margin: 10px 0;
 }
 section.about div.icon-links h4 {
   text-transform: uppercase;
@@ -36,23 +42,45 @@ section.about div.icon-links a:hover {
 section.about div.tech-box p {
   color: #00ADB5;
 }
-section.about div.tech, section.about div.skills {
+section.about div.tech-box div.tech, section.about div.tech-box div.skills {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  text-align: center;
 }
-section.about div.tech i, section.about div.tech b, section.about div.skills i, section.about div.skills b {
+section.about div.tech-box div.tech i, section.about div.tech-box div.tech b, section.about div.tech-box div.skills i, section.about div.tech-box div.skills b {
   color: #00ADB5;
+  font-size: 40px;
 }
-section.about div.tech span, section.about div.skills span {
+section.about div.tech-box div.tech span, section.about div.tech-box div.skills span {
+  font-size: 14px;
   padding: 10px 0;
   width: 25%;
 }
-section.about div.tech img, section.about div.skills img {
-  height: 16px;
-  vertical-align: middle;
+section.about div.tech-box div.tech img, section.about div.tech-box div.skills img {
+  height: 40px;
 }
 
+@media screen and (max-width: 600px) {
+  section.about {
+    height: auto;
+  }
+  section.about div.bio {
+    width: 100%;
+  }
+  section.about div.bio img {
+    width: 40%;
+  }
+  section.about div.bio div.text {
+    width: 100%;
+  }
+  section.about div.tech-box div.tech span, section.about div.tech-box div.skills span {
+    font-size: 14px;
+  }
+  section.about div.icon-links {
+    font-size: 20px;
+  }
+}
 div.contact {
   display: flex;
   justify-content: center;
@@ -321,6 +349,12 @@ body a {
 body hr {
   border-color: #00ADB5;
   margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  body main {
+    width: 95%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
