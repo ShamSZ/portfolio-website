@@ -14,12 +14,11 @@ section.projects {
   div.image {
     width: 65%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+    flex-wrap: wrap;
+
     div.mainImage {
       transition: all 1s;
-      height: 60%;
+      height: 75%;
       min-width: 100%;
       background-size: contain;
       background-repeat: no-repeat;
@@ -116,5 +115,65 @@ section.projects {
 @media screen and (max-width: 600px) {
   .hr-projects {
     visibility: hidden;
+  }
+
+  section.projects {
+    margin-top: 20px;
+
+    .project-box{
+      flex-wrap: wrap;
+
+      .image {
+        justify-content: flex-start;
+        width: 100%;
+        height: 50vh;
+
+        .mainImage {
+          height: 35vh;
+          width: 100%;
+        }
+      }
+    }
+
+    article.image-thumbs {
+      height: 15vh;
+    }
+
+    .project-box:hover, .project-box {
+      div.description {
+        max-width: 100%;
+        height: 50vh;
+
+        div.title {
+          display: block;
+          top: 0;
+          margin: 0;
+          height: auto;
+          color: $detail-color;
+          font-size: 24px;
+          h3 {
+            margin: 0;
+          }
+        }
+
+        div.stack {
+          bottom: 5%;
+          height: auto;
+          color: $detail-color;
+        }
+
+        div.text {
+          opacity: 1;
+          width: 100%;
+          height: 35vh;
+          justify-content: space-between;
+          overflow: auto;
+          
+          p {
+            line-height: 18px;
+          }
+        }
+      }
+    }
   }
 }
