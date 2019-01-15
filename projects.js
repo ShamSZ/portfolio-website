@@ -14,7 +14,7 @@ const projectsData = [
     secondParagraph: 'Rating Ninja was my second project from General Assembly\'s Web Development Immersive. It was an individual project built in one week, and was my first multi-page, RESTful web app that didn\'t only involve working with the front-end. Working on this project helped me understand the basics of working with databases using Node.js packages and the MVC model.',
     launchLink: 'https://rating-ninja.herokuapp.com/',
     repoLink: 'https://github.com/ShamSZ/wdi-project-two',
-    stack: 'EJS, MongoDB, Express.js, Node.js',
+    stack: 'EJS, MongoDB, Express.js, Node.js, Bulma, CSS3',
     images: ['images/project2/index1.png', 'images/project2/home.png', 'images/project2/register.png', 'images/project2/show1.png', 'images/project2/show2.png', 'images/project2/edit.png', 'images/project2/profile1.png', 'images/project2/profile-edit.png']
   },
   {
@@ -23,7 +23,7 @@ const projectsData = [
     secondParagraph: 'This was my third project as part of the General Assembly Web Development Immersive course. The objective was to build a full stack(MEAN), RESTful web application using AngularJS in one week.',
     launchLink: 'https://eventz-planner.herokuapp.com/#!/',
     repoLink: 'https://github.com/ShamSZ/wdi-project-three',
-    stack: 'HTML5, MongoDB, Express.js, AngularJS, Node.js, OpenStreetMap API, Mocha & Chai',
+    stack: 'HTML5, MongoDB, Express.js, AngularJS, Node.js, Bulma, Sass, OpenStreetMap API, Mocha & Chai',
     images: ['images/project3/home.png', 'images/project3/mobile1.png', 'images/project3/mobile2.png', 'images/project3/map.png', 'images/project3/register.png', 'images/project3/profile.png', 'images/project3/profile-edit.png']
   },
   {
@@ -32,7 +32,7 @@ const projectsData = [
     secondParagraph: 'This was my fourth project as part of the General Assembly Web Development Immersive course. The objective was to build a full stack(MERN), RESTful web application using React.js in one week.',
     launchLink: 'https://play-and-watch.herokuapp.com/',
     repoLink: 'https://github.com/ShamSZ/wdi-project-four',
-    stack: 'HTML5, MongoDB, Express.js, React.js, Node.js, Mocha & Chai',
+    stack: 'HTML5, MongoDB, Express.js, React.js, Node.js, Bulma, Sass, Mocha & Chai',
     images: ['images/project4/index2.png', 'images/project4/index1.png', 'images/project4/show1.png', 'images/project4/show2.png', 'images/project4/basket.png', 'images/project4/admin.png', 'images/project4/add.png', 'images/project4/statistics.png']
   }
 ];

@@ -77,7 +77,7 @@ section.projects {
       flex-direction: column;
       justify-content: space-around;
       height: 60%;
-      overflow: scroll;
+      overflow: auto;
       text-align: justify;
       p {
         line-height: 20px;
@@ -168,7 +168,7 @@ section.projects {
           height: 35vh;
           justify-content: space-between;
           overflow: auto;
-          
+
           p {
             line-height: 18px;
           }
