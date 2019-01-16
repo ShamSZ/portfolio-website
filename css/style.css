@@ -118,28 +118,31 @@ div.contact p a i {
 }
 section.header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-section.header .text {
   text-transform: uppercase;
 }
-section.header .text h1 {
+section.header h1 {
   font-size: 45px;
   color: #FFF4E0;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #00ADB5;
+  margin-bottom: 0;
 }
-section.header .text h2 {
+section.header h2 {
+  margin-top: 15px;
   color: #00ADB5;
   font-size: 30px;
 }
 
 /* Media Queries */
 @media screen and (max-width: 800px) {
-  section.header .text h1 {
+  section.header h1 {
     font-size: 30px;
   }
-  section.header .text h2 {
+  section.header h2 {
     font-size: 20px;
   }
 }
@@ -282,7 +285,7 @@ section.projects .description div.text {
   flex-direction: column;
   justify-content: space-around;
   height: 60%;
-  overflow: scroll;
+  overflow: auto;
   text-align: justify;
 }
 section.projects .description div.text p {

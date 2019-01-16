@@ -1,18 +1,21 @@
 section.header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  .text {
     text-transform: uppercase;
     h1 {
       font-size: 45px;
       color: $text-color;
+      padding-bottom: 15px;
+      border-bottom: 2px solid $detail-color;
+      margin-bottom: 0;
     }
     h2 {
+      margin-top: 15px;
       color: $detail-color;
       font-size: 30px;
-    }
   }
 }
 
@@ -21,13 +24,11 @@ section.header {
 
 @media screen and (max-width: 800px) {
   section.header {
-    .text {
       h1 {
         font-size: 30px;
       }
       h2 {
         font-size: 20px;
       }
-    }
   }
 }
