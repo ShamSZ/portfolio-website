@@ -246,7 +246,6 @@ section.projects div.image article.image-thumbs {
 section.projects div.image article.image-thumbs img.thumb {
   margin-right: 10px;
   max-height: 100%;
-  max-width: 220px;
   opacity: 0.3;
   transition: opacity 1s;
 }
